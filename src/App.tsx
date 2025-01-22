@@ -2,7 +2,24 @@ import Navbar from './components/Navbar';
 import ThreeBackground from './components/ThreeBackground';
 import ExperienceTimeline from './components/ExperienceTimeline';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Mail, Linkedin, ArrowRight, Code, Globe, Database, Building2, Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Github, ExternalLink, Mail, Linkedin, ArrowRight, Code, Globe, Database , Building2 , Calendar ,
+ Briefcase } from 'lucide-react';
+// import {
+//   SiTypescript,
+//   SiJavascript,
+//   SiReact,
+//   SiNextdotjs,
+//   SiNodedotjs,
+//   SiExpress,
+//   SiMongodb,
+//   SiPostgresql,
+//   SiDocker,
+//   SiGithub,
+//   SiNextra,
+//   SiAmazon,
+//   SiRedis,
+//   SiGraphql,
+// } from "react-icons/si";
 
 function App() {
   return (
@@ -331,7 +348,7 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="experience" className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -348,17 +365,18 @@ function App() {
         </div>
       </section>
 
-     {/* Space-Inspired Skills Section */}
-<section id="skills" className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
+  {/* Skills Section */}
+<section id="skills" className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900 text-white relative overflow-hidden">
   {/* Background Stars */}
   <div className="absolute inset-0 -z-10">
-    <div className="absolute top-0 left-0 w-4 h-4 bg-white rounded-full blur-sm animate-pulse"></div>
-    <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-blue-500 rounded-full blur-md animate-pulse"></div>
-    <div className="absolute bottom-10 right-10 w-5 h-5 bg-purple-600 rounded-full blur-lg animate-pulse"></div>
-    <div className="absolute bottom-1/4 left-1/2 w-3 h-3 bg-yellow-500 rounded-full blur-md animate-pulse"></div>
+    <div className="absolute top-10 left-20 w-4 h-4 bg-white rounded-full blur-sm animate-pulse"></div>
+    <div className="absolute top-1/4 right-1/3 w-3 h-3 bg-blue-500 rounded-full blur-md animate-pulse"></div>
+    <div className="absolute bottom-10 left-10 w-5 h-5 bg-purple-600 rounded-full blur-lg animate-pulse"></div>
+    <div className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-yellow-500 rounded-full blur-md animate-pulse"></div>
   </div>
 
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -367,43 +385,139 @@ function App() {
       className="text-center mb-16"
     >
       <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">
-        Skills from the Cosmos
+        Skills Across the Cosmos
       </h2>
-      <p className="text-gray-300 text-lg">
-        Explore my technical stack, orbiting around web development and beyond.
+      <p className="text-black text-lg bg-gray-50 dark:bg-gray-900 dark:text-white">
+        A constellation of skills orbiting around frontend, backend, DevOps, and more.
       </p>
     </motion.div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-      {[
-        { icon: <Code className="w-10 h-10 text-primary-500" />, label: 'Frontend Development' },
-        { icon: <Database className="w-10 h-10 text-yellow-500" />, label: 'Backend Development' },
-        { icon: <Globe className="w-10 h-10 text-green-500" />, label: 'Web Performance' },
-        { icon: <Building2 className="w-10 h-10 text-indigo-500" />, label: 'Architecture Design' },
-        { icon: <Calendar className="w-10 h-10 text-teal-500" />, label: 'Agile Workflows' },
-        { icon: <Briefcase className="w-10 h-10 text-pink-500" />, label: 'Cloud Platforms' },
-      ].map((skill, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.6,
-            delay: index * 0.1,
-            ease: 'easeOut',
-          }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
-        >
-          <div className="p-4 bg-gray-900 rounded-full">
-            {skill.icon}
-          </div>
-          <p className="text-lg font-semibold">{skill.label}</p>
-        </motion.div>
-      ))}
+    {/* Skills Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Frontend Skills */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
+      >
+        <h3 className="text-xl font-semibold text-indigo-400 mb-4">Frontend Development</h3>
+        <ul className="space-y-2">
+          <li className="flex items-center space-x-2">
+            <Code className="w-6 h-6 text-primary-500" />
+            <span>ReactJS</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Code className="w-6 h-6 text-primary-500" />
+            <span>Next.js</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Code className="w-6 h-6 text-primary-500" />
+            <span>JavaScript</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Code className="w-6 h-6 text-primary-500" />
+            <span>TypeScript</span>
+          </li>
+        </ul>
+      </motion.div>
+
+      {/* Backend Skills */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
+      >
+        <h3 className="text-xl font-semibold text-yellow-400 mb-4">Backend Development</h3>
+        <ul className="space-y-2">
+          <li className="flex items-center space-x-2">
+            <Database className="w-6 h-6 text-yellow-500" />
+            <span>Node.js</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Database className="w-6 h-6 text-yellow-500" />
+            <span>Express.js</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Database className="w-6 h-6 text-yellow-500" />
+            <span>GraphQL</span>
+          </li>
+        </ul>
+      </motion.div>
+
+      {/* Database Skills */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
+      >
+        <h3 className="text-xl font-semibold text-green-400 mb-4">Databases</h3>
+        <ul className="space-y-2">
+          <li className="flex items-center space-x-2">
+            <Globe className="w-6 h-6 text-green-500" />
+            <span>MongoDB</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Globe className="w-6 h-6 text-green-500" />
+            <span>SQL</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Globe className="w-6 h-6 text-green-500" />
+            <span>Redis</span>
+          </li>
+        </ul>
+      </motion.div>
+
+      {/* DevOps and Tools */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
+      >
+        <h3 className="text-xl font-semibold text-purple-400 mb-4">DevOps & Tools</h3>
+        <ul className="space-y-2">
+          <li className="flex items-center space-x-2">
+            <Building2 className="w-6 h-6 text-indigo-500" />
+            <span>Docker</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Building2 className="w-6 h-6 text-indigo-500" />
+            <span>AWS</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <Building2 className="w-6 h-6 text-indigo-500" />
+            <span>GitHub</span>
+          </li>
+        </ul>
+      </motion.div>
+
+      {/* Authentication */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center space-y-4 bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-transform"
+      >
+        <h3 className="text-xl font-semibold text-teal-400 mb-4">Authentication</h3>
+        <ul className="space-y-2">
+          <li className="flex items-center space-x-2">
+            <Calendar className="w-6 h-6 text-teal-500" />
+            <span>NextAuth</span>
+          </li>
+        </ul>
+      </motion.div>
     </div>
   </div>
 </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-20">

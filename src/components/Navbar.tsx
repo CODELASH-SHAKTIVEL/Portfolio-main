@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import logo from '../assets/logo.webp'
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -45,7 +46,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 font-bold text-2xl text-primary-600 dark:text-primary-400">
-            Portfolio
+            <img src={logo} alt="Logo" className="h-12 w-auto w-10 rounded-full overflow-hidden"  />
           </div>
 
           {/* Desktop Navigation */}
